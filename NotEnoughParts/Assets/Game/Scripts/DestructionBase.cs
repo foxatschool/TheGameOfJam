@@ -21,7 +21,6 @@ public class DestructionBase : MonoBehaviour
     private void Start()
     {
        audioSource = GetComponent<AudioSource>();
-        AudioClip jkljlk = audioClips[0];
     }
 
     private void Update()
