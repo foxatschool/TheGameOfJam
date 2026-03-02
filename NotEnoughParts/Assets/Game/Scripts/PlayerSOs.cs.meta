@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 7a940a7ce86d2594780a43558446ebbf
+guid: b01b435254c8b9e44b83eb175fe72c76
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
   - takeDamageSO: {fileID: 11400000, guid: 9f5321ca3936eb54b9e990550c50f8a2, type: 2}
+  - givePartsSO: {fileID: 11400000, guid: b4cb19fd6f06add4e8071be4649a1455, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
