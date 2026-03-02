@@ -2,6 +2,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 //using UnityEngine.Rendering;
 
 [RequireComponent(typeof(AudioSource))]
@@ -10,16 +11,16 @@ public class DestructionBase : MonoBehaviour
     [SerializeField]private TakeDamageSO takeDamageEvent;
 
     [SerializeField] protected string objectName = "Destructible Object";
-    [SerializeField] protected float degradationRate = .1f;
-    [SerializeField] protected float repairRate = .1f;
+    [SerializeField] protected float degradationRate = 1f;
+    [SerializeField] protected float repairRate = 1f;
 
     [SerializeField] protected float maxHealth = 100f;
     [SerializeField] public float currentHealth = 100f;
 
-    protected float timeBetweenDamage = 0.1f;
+    protected float timeBetweenDamage = 1.0f;
     [SerializeField] protected float timeBetweenDamageMax = 0.1f;
     protected float timeBetweenRepair = 1.0f;
-    [SerializeField] protected float timeBetweenRepairMax = 1.0f;
+    [SerializeField] protected float timeBetweenRepairMax = 0.2f;
 
     [SerializeField] protected bool raparing = false;
     //[SerializeField] protected float maxRandom = 1f;
@@ -41,7 +42,7 @@ public class DestructionBase : MonoBehaviour
             timeBetweenDamage = timeBetweenDamageMax;
             onDamage();
         }
-        else if (raparing)
+        else if (raparing && Keyboard.current.eKey.isPressed)
         {
             currentHealth += repairRate * Time.deltaTime;
         }
@@ -92,4 +93,10 @@ public class DestructionBase : MonoBehaviour
     {
         return currentHealth;
     }
+
+    public void StartOrStopRepair(bool repairing)
+    {
+        raparing = repairing;
+    }
+
 }
