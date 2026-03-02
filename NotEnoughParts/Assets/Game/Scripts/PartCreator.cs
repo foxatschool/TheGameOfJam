@@ -30,7 +30,14 @@ public class PartCreator : MonoBehaviour
 
     public void GiveParts() 
     {
-        partCount -= 1;
+        if(FindAnyObjectByType<SimpleInventory>() != null)
+        {
+            if (partCount > 0)
+            {
+                FindAnyObjectByType<SimpleInventory>().AddParts(partCount);
+                partCount -= 1;
+            }
+        }
     }
 
 
