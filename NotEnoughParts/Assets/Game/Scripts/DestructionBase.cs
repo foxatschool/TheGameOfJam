@@ -7,12 +7,15 @@ using UnityEngine.Audio;
 [RequireComponent(typeof(AudioSource))]
 public class DestructionBase : MonoBehaviour
 {
+    private TakeDamageSO takeDamageEvent;
 
     [SerializeField] protected string objectName = "Destructible Object";
     [SerializeField] protected float degradationRate = 0.1f;
     [SerializeField] protected float repairRate = 0.1f;
+
     [SerializeField] protected float maxHealth = 100f;
-    [SerializeField] protected float currentHealth = 100f;
+    [SerializeField] public float currentHealth = 100f;
+
     [SerializeField] protected bool raparing = false;
     [SerializeField] protected float maxRandom = 1f;
     [SerializeField] protected AudioClip[] audioClips = new AudioClip[6];
@@ -63,6 +66,7 @@ public class DestructionBase : MonoBehaviour
         {
             audioSource.clip = audioClips[5];
             audioSource.Play();
+            takeDamageEvent.RaiseEvent();
         }
          currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
