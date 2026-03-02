@@ -1,3 +1,4 @@
+using CGL.Actor;
 using UnityEngine;
 
 public class DamageTaker : MonoBehaviour
@@ -17,6 +18,9 @@ public class DamageTaker : MonoBehaviour
 
     void TakeDamage()
     {
-        Debug.Log("Damage Taken");
+        if(GetComponent<Health>() != null)
+        {
+            GetComponent<Health>().TakeDamage(0.3f * Time.deltaTime);
+        }
     }
 }
