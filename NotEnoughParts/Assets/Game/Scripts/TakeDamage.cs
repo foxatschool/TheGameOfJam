@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "Damage", menuName = "Events/Event")]
+[CreateAssetMenu(fileName = "Damage", menuName = "Events/DamageFlag")]
 public class TakeDamageSO : ScriptableObject
 {
     private UnityAction listeners;
