@@ -4684,7 +4684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CGL.Scene.SceneBootstrapper
   sceneName: Bootstrapper
   mode: 1
-  useAsyncLoading: 0
+  useAsyncLoading: 1
 --- !u!114 &1517251612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4704,7 +4704,7 @@ MonoBehaviour:
   backgroundMusic: {fileID: 0}
   onSceneLoadCompleteEvent: {fileID: 11400000, guid: 05b13445d6282dc438fabcef5df52f83, type: 2}
   onSceneReadyEvent: {fileID: 0}
-  sceneData: {fileID: 11400000, guid: f7b128c568035a8468d8777a360678d5, type: 2}
+  sceneData: {fileID: 0}
 --- !u!1 &1537281484
 GameObject:
   m_ObjectHideFlags: 0
