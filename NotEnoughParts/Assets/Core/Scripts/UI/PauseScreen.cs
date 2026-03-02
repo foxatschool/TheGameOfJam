@@ -11,6 +11,10 @@ namespace CGL.UI
 		private GameObject pausePanel;
 
 		[SerializeField]
+		[Tooltip("UI panel to show when the game isn't paused.")]
+		private GameObject playerPanel;
+
+		[SerializeField]
 		[Tooltip("Stores the current pause state. True = paused, False = resumed.")]
 		private BoolDataSO pauseData;
 
@@ -40,6 +44,7 @@ namespace CGL.UI
 		{
 			if (pauseData == null) return;
 			pausePanel?.SetActive(pauseData.value);
+			playerPanel?.SetActive(!pauseData.value);
 		}
 
 		public void OnResume()

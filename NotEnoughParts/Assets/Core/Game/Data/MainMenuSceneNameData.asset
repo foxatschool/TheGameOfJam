@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MainMenuSceneNameData
   m_EditorClassIdentifier: Assembly-CSharp::CGL.Data.StringDataSO
   description: Scene name of main main.
-  value: MainMenuExample
+  value: MainMenu

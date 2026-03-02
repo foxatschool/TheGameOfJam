@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CGL.Scene.SceneProgressionSO
   description: List of scenes in the project.
   levels:
-  - {fileID: 11400000, guid: 8acf694b07b9f03419c041a433331701, type: 2}
-  - {fileID: 11400000, guid: 0391d81ad8a97de4d904f366fbc22910, type: 2}
+  - {fileID: 11400000, guid: f7b128c568035a8468d8777a360678d5, type: 2}
   currentIndex: 0
